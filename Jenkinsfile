@@ -18,8 +18,8 @@ pipeline{
               script{ 
                 
                 withSonarQubeEnv(credentialsId: 'sonar-token') {
-                    sh 'mvn clean install -U'
-                    
+                    sh 'sudo -i'
+
                  sh 'mvn clean package sonar:sonar'
 
                  
